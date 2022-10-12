@@ -114,6 +114,11 @@ function PeopleStory() {
     });
   }, []);
 
+  const breakpointColumns = {
+    default: 2,
+    767: 1,
+  };
+
   const [interviewData, setInterviewData] = useState<InterviewProps[]>([]);
   const [weWorkData, setWeWorkData] = useState<WeworkProps[]>([]);
   useEffect(() => {
@@ -764,7 +769,7 @@ function PeopleStory() {
 
             <Styles.WorkDetail>
               <Masonry
-                breakpointCols={2}
+                breakpointCols={breakpointColumns}
                 className="my-masonry-grid"
                 columnClassName="my-masonry-grid_column"
               >
